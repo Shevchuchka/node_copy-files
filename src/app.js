@@ -12,8 +12,12 @@ function copy() {
     return;
   }
 
+  if (sourceFile === destinationFile) {
+    return;
+  }
+
   fs.copyFile(sourceFile, destinationFile, (error) => {
-    console.error(error);
+    console.error('copy error: ', error);
   });
 }
 
