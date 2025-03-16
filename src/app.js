@@ -7,7 +7,7 @@ function copy() {
   const [sourceFile, destinationFile] = process.argv.slice(2);
 
   if (process.argv.length !== 4) {
-    console.error('You need provide 4 arg');
+    console.error('Error: You need provide 4 arg.');
 
     return;
   }
@@ -17,7 +17,7 @@ function copy() {
   }
 
   fs.copyFile(sourceFile, destinationFile, (error) => {
-    console.error('copy error: ', error);
+    console.error('Error: ', error, '.');
   });
 }
 
